@@ -1,7 +1,166 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 {
-    margin  : 0;
-    padding : 0;
-    box-sizing: border-box;
+    margin      : 0;
+    padding     : 0;
+    box-sizing  : border-box;
     font-family : "Roboto, sans-serif";
 }
+
+/* ---------------------------------------------------------------- */
+/*                             Scrollbar                            */
+/* ---------------------------------------------------------------- */
+
+::-webkit-scrollbar{
+    width : 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color : #cccccc;
+    border-radius    : 6px;
+}
+/* ---------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------- */
+/*                        Mise en forme page                        */
+/* ---------------------------------------------------------------- */
+
+body{
+    display          : flex;
+    align-items      : center;
+    justify-content  : center;
+    min-height       : 100vh;
+    background-color : dimgrey;
+}
+
+.form_connexion_inscription{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    width : 350px;
+    padding : 20px;
+    border-radius : 6px;
+    box-shadow : 0 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form_connexion_inscription .message_error{
+    color : red;
+    font-size : 13px;
+}
+
+.form_connexion_inscription label{
+    margin : 2px 0;
+}
+
+.form_connexion_inscription input{
+    padding : 5px;
+    outline : 0;
+    border-radius: 6px;
+    border : 1px solid #999;
+}
+
+.form_connexion_inscription input[type='submit']{
+    margin-top : 20px;
+    background-color : dimgrey;
+    border : 1px solid dimgrey;
+    color : white;
+}
+
+.form_connexion_ins .link{
+    margin-top : 20px;
+    font-size : 13px;
+    text-align: center;
+}
+
+/* ---------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------- */
+/*                Mise en forme btn "Créer un compte"               */
+/* ---------------------------------------------------------------- */
+.link a{
+    color : dimgrey;
+    font-size : 13px;
+    text-decoration : none;
+}
+
+.link a:hover{
+    text-decoration : underline;
+}
+
+/*---------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------- */
+/*                  Mise en forme du Chat en Ligne                  */
+/* ---------------------------------------------------------------- */
+
+.chat{
+    background-color : white;
+    padding : 10px;
+    border-radius : 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.email_btn{
+    font-size: 13px;
+    display: flex;
+    align-items : center;
+    justify-content : space-between;
+}
+
+.deconnexion_btn{
+    font-size: 13px;
+    padding : 5px 20px;
+    color : white;
+    background-color : dimgrey;
+    text-decoration: none;
+    border-radius : 6px;
+}
+
+.messages_box{
+    min-height : 350px;
+    min-width : 350px;
+    margin : 10px auto;
+    overflow: auto;
+    padding : 5px 10px;
+    border-top : 1px solid #999999;
+}
+
+.messages_box .message{
+    margin-bottom : 15px;
+    padding : 8px;
+    box-shadow : 0 0 10px rgba(0,0,0,0.1);
+    width : 350px;
+}
+
+.messages_box .message span{
+    font-weight : bold;
+    font-size : 13px;
+}
+
+.messages_box p{
+    word-break : break-all;
+    font-size : 13px;
+}
+
+.your_message {
+    border: 1px solid dimgrey;
+    border-radius: 10px 10px 10px 0;
+}
+
+.your_message span{
+    color : dimgrey;
+}
+
+.other_message{
+    border: 1px solid #999999;
+    border-radius : 10px 10px 0 10px;
+}
+
+.other_message span{
+    color : #333333;
+}
+
+.date{
+    color : #cccccc;
+}
+
+/*---------------------------------------------------------------- */
