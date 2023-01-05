@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (isset($_SESSION['user'])) {
-    header('Location: index.php');
+    header('Location: pageConnexion.php');
 }
 session_destroy();
-header('Location: index.php');
+header('Location: pageConnexion.php');
 ?>

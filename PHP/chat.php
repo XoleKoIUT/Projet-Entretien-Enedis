@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['user'])) {
-    header('Location: index.php');
+    header('Location: pageConnexion.php');
 }
 $user = $_SESSION['user'];
 ?>
@@ -27,7 +27,7 @@ $user = $_SESSION['user'];
     if (isset($_POST['envoi'])) {
         /* Permet de récupérer le message que l'utilisateur a écrit */
         $message = $_POST['message'];
-        include 'connexion.php';
+        include 'connexionBDD.php';
         if (isset($message) && $message != "") {
             /* Insertion du message dans la base de données */
             $req = mysqli_query($con, "INSERT INTO messages VALUES (NULL, '$user', '$message', NOW())");
@@ -54,9 +54,9 @@ $user = $_SESSION['user'];
             }
         };
         /* Récupération de la page message */
-        xhttp.open("GET", "messages.php", true);
+        xhttp.open("GET", "pageMessagerie.php", true);
         xhttp.send()
-    }, 50) // Actualiser le chat tous les 500 ms
+    }, 50) // Actualiser le chat tous les 50 ms
 </script>
 </body>
 </html>

@@ -7,10 +7,10 @@ var mdp2 = document.querySelector('.mdp2');
 
 mdp2.onkeyup = function () {
     message_error = document.querySelector('.message_error');
-    /* Vérification de l'égalité */
+    /* Vérification de l'égalité des mots de passe*/
     if (mdp1.value != mdp2.value) {
-        message_error.innerText = "Mdp confirmation non conforme";
+        message_error.innerText = "Mot de passes ne sont pas conformes";
     } else {
-        message_error.innerText = ""; /* Car les mots de passes sont conformes entre eux */
+        message_error.innerText = ""; /* Car les mots de passe sont conformes entre eux */
     }
 }
